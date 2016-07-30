@@ -26,7 +26,11 @@ and take a look to this other article to have a nice introduction about Slack co
 
 https://slackhq.com/a-beginner-s-guide-to-your-first-bot-97e5b0b7843d#.b0g81aa4z
 
+You need to configure these variables in the code:
 
+* JiraBaseUrl .- your Jira URL
+* UserAuthentication .- For now the mapping of the users between Slack and Jira is stored statically in a Dictionary
+* SlackToken .- after configuring your slack command in your slack configuration page you get this token
 
 ## Running the tests
 
