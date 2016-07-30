@@ -4,7 +4,17 @@ This project allows to connect Jira and Slack and log hours from the command lin
 
 ## Getting Started
 
-The project is build under .NET Framework 4.5.2, it uses a Web API 2 without any security
+The project is build under .NET Framework 4.5.2
+It uses a Web API 2 without any security.
+
+Nuget Packages:
+
+Atlassian.SDK
+Autofac
+log4net
+Newtonsoft.Json
+RestSharp
+Microsoft.AspNet.WebApi
 
 ### Prerequisities
 
@@ -14,79 +24,32 @@ https://github.com/mccreath/isitup-for-slack/blob/master/docs/TUTORIAL.md
 
 and take a look to this other article to have a nice introduction about Slack commands:
 
+https://slackhq.com/a-beginner-s-guide-to-your-first-bot-97e5b0b7843d#.b0g81aa4z
 
-```
-Give examples
-```
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Stay what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+No unit or integration test yet
 
-### Break down into end to end tests
-
-Explain what these tests test and why
+Place this under Fiddler, postman or whatever tool you use:
 
 ```
-Give an example
+http://localhost:50277/api/slack/slackcommand
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+Header
 ```
-Give an example
+User-Agent: Fiddler
+Host: localhost:50277
+content-type: application/x-www-form-urlencoded
+Content-Length: 243
+```
+Body
+```
+token=YOUR_TOKEN_HERE&team_id=T0001&team_domain=example&channel_id=C2147483705&channel_name=test&user_id=U2147483697&user_name=Steve&command=/weather&text=94070&response_url=https://hooks.slack.com/commands/1234/5678
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+I have use Web apps in azure to deploy it.
