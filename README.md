@@ -9,12 +9,12 @@ It uses a Web API 2 without any security.
 
 Nuget Packages:
 
-Atlassian.SDK
-Autofac
-log4net
-Newtonsoft.Json
-RestSharp
-Microsoft.AspNet.WebApi
+* Atlassian.SDK
+* Autofac
+* log4net
+* Newtonsoft.Json
+* RestSharp
+* Microsoft.AspNet.WebApi
 
 ### Prerequisities
 
